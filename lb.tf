@@ -3,7 +3,7 @@ resource "azurerm_public_ip" "pubIP" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
-  sku = "Standard"
+  sku                 = "Standard"
 
 
 }
@@ -12,7 +12,7 @@ resource "azurerm_lb" "lb" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = "Standard"
-  
+
 
 
 
@@ -25,8 +25,8 @@ resource "azurerm_lb" "lb" {
 }
 
 resource "azurerm_lb_backend_address_pool" "lbBackPool" {
-  name                = "loadBalancerBackPool"
-  loadbalancer_id     = azurerm_lb.lb.id
+  name            = "loadBalancerBackPool"
+  loadbalancer_id = azurerm_lb.lb.id
 
 }
 /*

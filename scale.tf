@@ -9,7 +9,7 @@ resource "azurerm_monitor_autoscale_setting" "vmss" {
 
     capacity {
       default = 2
-      minimum = 1
+      minimum = 2
       maximum = 5
     }
 
